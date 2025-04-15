@@ -30,22 +30,33 @@ class _WorkState extends State<Work> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.lightBlueAccent,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Text('Is Flutter developed by Google?')),
+          Center(
+            child: Text(
+              'Is Flutter developed by Google?',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+            ),
+          ),
           SizedBox(height: 20),
-          ElevatedButton(onPressed: onYesPress, child: Text('A:Yes')),
+          ElevatedButton(
+            onPressed: onYesPress,
+            child: Text('A:Yes', style: TextStyle(fontSize: 15)),
+          ),
           SizedBox(height: 20),
-          ElevatedButton(onPressed: onNoPress, child: Text('B:No')),
+          ElevatedButton(
+            onPressed: onNoPress,
+            child: Text('B:No', style: TextStyle(fontSize: 15)),
+          ),
           SizedBox(height: 20),
 
           Text('${userChoice}'),
           SizedBox(height: 20),
 
-          Text('Correct: ${correctCount} '),
-          Text('Correct:${wrongCount} '),
+          Text('Correct: ${correctCount} ', style: TextStyle(fontSize: 18)),
+          Text('Wrong:${wrongCount} ', style: TextStyle(fontSize: 18)),
           SizedBox(height: 30),
 
           ElevatedButton(
